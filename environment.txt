@@ -1,0 +1,30 @@
+# RWKVHSI environment
+# Paper experimental platform:
+#   OS: Ubuntu 22.04
+#   CPU: Intel Xeon Silver 4310
+#   GPU: 2 x NVIDIA RTX 4090
+#   CUDA: 11.8
+#   PyTorch: 2.1.1
+#
+# Recommended setup:
+#   conda create -n rwkvhsi python=3.10
+#   conda activate rwkvhsi
+#   pip install -r environment.txt
+#
+# Note:
+#   This file targets the CUDA 11.8 reproduction environment described
+#   in the paper. For CPU-only usage, install the CPU build of PyTorch
+#   separately and keep the remaining packages unchanged.
+
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+torch==2.1.1+cu118
+numpy==1.26.4
+scipy==1.11.4
+scikit-learn==1.3.2
+spectral==0.23.1
+seaborn==0.13.0
+matplotlib==3.8.2
+tqdm==4.66.1
+einops==0.7.0
+joblib==1.3.2
